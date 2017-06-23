@@ -7,8 +7,6 @@ import { Provider } from "react-redux";
 import { store } from "./redux/store.js";
 import Quiz from "./Quiz";
 
-
-
 import './index.css';
 
 
