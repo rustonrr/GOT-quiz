@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-import { onUserNameChange } from "./redux/store";
+import { onUserNameChange } from "./redux/reducers";
 import { Link } from "react-router-dom";
+
+import ResultsPage from "./ResultsPage";
 
 import './App.css';
 
@@ -18,6 +20,9 @@ class App extends Component {
         <button onClick={this.props.onGoButtonClick} disabled={!this.props.text}>
           <Link to={"/quiz"}>Go</Link>
         </button>
+              <div className="test">
+                THIS IS WORKING: {this.props.text}
+              </div>
       </div>
     );
   }
@@ -25,7 +30,7 @@ class App extends Component {
 
 function mapStateToProps (state) {
   return {
-    text: state.appState.userName
+    text: state.userName
   }
 }
 

@@ -22,7 +22,7 @@ export default function Quiz(props) {
           <input type="radio" name="questionone" value="D test" /><label for="D test"> D test</label><br />
         </div>
 
-        <button className="Button"><Link to={"/quiz"}>Submit</Link></button>
+        <button className="Button"><Link to={"/ResultsPage"}>Submit</Link></button>
 
         {/*<div>{props.children}</div>*/}
 
