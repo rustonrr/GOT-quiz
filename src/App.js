@@ -31,7 +31,7 @@ function mapStateToProps (state) {
 function mapDispatchToProps (dispatch) {
   return {
     onTextChange: (event) => {dispatch(onUserNameChange(event.target.value))},
-    onGoButtonClick: function() {} //dont have to use dispatch
+    onGoButtonClick: () => {} //dont have to use dispatch
   }
 }
 //create react app another app
