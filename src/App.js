@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
 import { onUserNameChange } from "./redux/store";
+import { Link } from "react-router-dom";
 
 import './App.css';
 
@@ -15,7 +16,7 @@ class App extends Component {
         </div>
         <input placeholder="Enter Name" value={this.props.text} onChange={this.props.onTextChange} />
         <button onClick={this.props.onGoButtonClick} disabled={!this.props.text}>
-          Go
+          <Link to={"/quiz"}>Go</Link>
         </button>
       </div>
     );
@@ -43,3 +44,8 @@ function mapDispatchToProps (dispatch) {
 //dont forget you're using browserrouter
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
+
+
+//classname for pointer-events: none
+//inside link, a situational class
+//based on this.state.disabled
